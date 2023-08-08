@@ -1,0 +1,410 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+html {
+  overflow-x: hidden;
+  position: relative;
+}
+.blue {
+  position: absolute;
+  top: -10vh;
+  right: 0;
+  z-index: -1;
+}
+.blue img {
+  height: 100vh;
+}
+
+header nav {
+  width: 100%;
+}
+header nav ul {
+  padding: 2rem;
+  width: 70%;
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+}
+header nav ul li {
+  font-size: 1.5rem;
+}
+header nav ul li a {
+  color: #000000;
+  text-decoration: none;
+}
+header nav ul li a:hover {
+  color: #3C5D9C;
+}
+
+main {
+  display: flex;
+}
+main section.left {
+  flex: 3 1 500px;
+  padding: 2.5rem;
+  position: relative;
+}
+main section.left h1 {
+  font-size: 4rem;
+  color: #3C5D9C;
+}
+main section.left p {
+  font-size: 1.5rem;
+  padding: 2rem 0rem;
+}
+main section.left .circle1 {
+  position: absolute;
+  z-index: 0;
+  min-width: 10rem;
+  min-height: 10rem;
+  background-color: #3C5D9C;
+  border-radius: 50%;
+  opacity: 0.5;
+  top: 90%;
+  left: -10%;
+}
+main section.right {
+  flex: 1 1 600px;
+  position: relative;
+}
+main section.right img {
+  border-radius: 50%;
+  width: 20vw;
+  height: 20vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 35vh;
+  right: 10vw;
+  transform: translateY(-50%);
+}
+main section.right p {
+  position: absolute;
+  top: 65vh;
+  right: 10vw;
+  padding: 0.5rem 1.5rem;
+  font-size: 2.5rem;
+  color: #fff;
+  background-color: #bb99f1;
+  box-shadow: 1.5rem 1.5rem #8650DE;
+}
+main section.table {
+  margin: 1.5rem 2rem;
+  flex: 3 1 500px;
+  padding: 1rem;
+}
+main section.table table {
+  border-collapse: collapse;
+}
+main section.table table tr {
+  border-bottom: 2px solid gray;
+  transition: 0.2s ease;
+}
+main section.table table tr:first-child {
+  border-top: 2px solid gray;
+}
+main section.table table tr:hover {
+  background-color: #3C5D9C;
+}
+main section.table table tr:hover td:nth-child(odd) {
+  color: white;
+}
+main section.table table tr:hover td:nth-child(even) {
+  color: #dddddd;
+}
+main section.table table tr td {
+  padding: 1rem;
+}
+main section.table table tr td:nth-child(odd) {
+  font-size: 1.5rem;
+  color: #3C5D9C;
+}
+main section.picture {
+  flex: 1 1 600px;
+}
+main section.picture img {
+  width: 28vw;
+  height: 74vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  box-shadow: 4rem 4rem #3C5D9C;
+}
+main section.form {
+  flex: 1 1 600px;
+}
+main section.form form {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1.5rem;
+}
+main section.form form div label {
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+main section.form form div input, main section.form form div textarea {
+  background-color: #5477b8;
+  color: white;
+  font-size: 1.25rem;
+  padding: 0.5rem 0.25rem;
+  border: none;
+  width: 90%;
+  margin-top: 1.8rem;
+}
+main section.form form div textarea {
+  vertical-align: 0;
+}
+main section.form form button {
+  align-self: center;
+  width: 10rem;
+  color: white;
+  background-color: #3C5D9C;
+  border: none;
+  cursor: pointer;
+  padding: 0.75rem 1.2rem;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+  transition: 0.5s ease;
+}
+main section.form form button:hover {
+  background-color: #bb99f1;
+}
+main div.line {
+  background-color: gray;
+  width: 3px;
+}
+main section.contact {
+  flex: 1 1 500px;
+  display: flex;
+  max-height: 70vh;
+}
+main section.contact div.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main section.contact div.content h2 {
+  margin: 2rem;
+  font-size: 1.5rem;
+}
+main section.contact div.content span {
+  color: #3C5D9C;
+  font-size: 1.8rem;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+footer .index a img {
+  margin: 8rem 4rem 0rem;
+}
+footer .resume a img {
+  margin: 0rem 4rem 2rem;
+}
+footer .contact a img {
+  margin: 0rem 4rem 2rem;
+}
+
+.active {
+  color: #3C5D9C;
+}
+
+div.animation {
+  width: 100%;
+  height: 100vh;
+  background-color: #3C5D9C;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#first {
+  stroke-dasharray: 441px;
+  stroke-dashoffset: 441px;
+  animation: fadeInside 0.6s ease-in forwards;
+}
+
+#second {
+  stroke-dasharray: 392px;
+  stroke-dashoffset: 392px;
+  animation: fadeInside 0.6s ease-in forwards 0.3s;
+}
+
+#third {
+  stroke-dasharray: 462px;
+  stroke-dashoffset: 462px;
+  animation: fadeInside 0.6s ease-in forwards 0.6s;
+}
+
+#fourth {
+  stroke-dasharray: 423px;
+  stroke-dashoffset: 423px;
+  animation: fadeInside 0.6s ease-in forwards 0.9s;
+}
+
+#fifth {
+  stroke-dasharray: 379px;
+  stroke-dashoffset: 379px;
+  animation: fadeInside 0.6s ease-in forwards 1.2s;
+}
+
+#sixth {
+  stroke-dasharray: 483px;
+  stroke-dashoffset: 483px;
+  animation: fadeInside 0.6s ease-in forwards 1.5s;
+}
+
+#seventh {
+  stroke-dasharray: 378px;
+  stroke-dashoffset: 378px;
+  animation: fadeInside 0.6s ease-in forwards 1.8s;
+}
+
+#eighth {
+  stroke-dasharray: 1426px;
+  stroke-dashoffset: 1426px;
+  animation: fadeInside 0.6s ease-in forwards;
+}
+
+#ninth {
+  stroke-dasharray: 1162px;
+  stroke-dashoffset: 1162px;
+  animation: fadeInside 0.6s ease-in forwards 0.3s;
+}
+
+#tenth {
+  stroke-dasharray: 1201px;
+  stroke-dashoffset: 1201px;
+  animation: fadeInside 0.6s ease-in forwards 0.6s;
+}
+
+#eleventh {
+  stroke-dasharray: 1426px;
+  stroke-dashoffset: 1426px;
+  animation: fadeInside 0.6s ease-in forwards 0.9s;
+}
+
+#twelfth {
+  stroke-dasharray: 620px;
+  stroke-dashoffset: 620px;
+  animation: fadeInside 0.6s ease-in forwards 1.2s;
+}
+
+#thirteenth {
+  stroke-dasharray: 1315px;
+  stroke-dashoffset: 1315px;
+  animation: fadeInside 0.6s ease-in forwards 1.5s;
+}
+
+#fourteenth {
+  stroke-dasharray: 1240px;
+  stroke-dashoffset: 1240px;
+  animation: fadeInside 0.6s ease-in forwards 1.8s;
+}
+
+svg {
+  animation: fill 1s ease-in forwards 2.4s;
+}
+
+@keyframes fadeInside {
+  to {
+    stroke-dashoffset: 0px;
+  }
+}
+@keyframes fill {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: #F5F5F5;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .blue {
+    opacity: 0.5;
+    max-width: 30vw;
+  }
+  header nav ul {
+    width: 100%;
+    flex-direction: column;
+  }
+  header nav ul li {
+    padding: 0.5rem 0;
+    border-bottom: 2px solid #bb99f1;
+  }
+  main {
+    flex-wrap: wrap;
+  }
+  main section.right {
+    display: flex;
+    justify-content: center;
+  }
+  main section.right img {
+    position: static;
+    transform: none;
+    min-width: 200px;
+    min-height: 200px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  main section.right p {
+    font-size: 1.5rem;
+    top: 20vh;
+    right: 10vw;
+    box-shadow: 1rem 1rem #8650DE;
+  }
+  main section.picture {
+    display: flex;
+    justify-content: center;
+  }
+  main section.picture img {
+    width: 45vw;
+    height: 40vh;
+    box-shadow: 2rem 2rem #3C5D9C;
+  }
+  div.line {
+    opacity: 0;
+  }
+  section.contact div.content {
+    margin: 1rem;
+  }
+  section.contact div.content h2 {
+    font-size: 0.2rem;
+  }
+  section.contact div.content h2 span {
+    font-size: 1.5rem;
+    padding: 0;
+  }
+  footer {
+    display: flex;
+    justify-content: space-around;
+  }
+  footer .index a img {
+    width: 8vw;
+    height: 8vw;
+    margin: 4rem 2rem 1rem;
+  }
+  footer .resume a img {
+    width: 8vw;
+    height: 8vw;
+    margin: 4rem 2rem 1rem;
+  }
+  footer .contact a img {
+    width: 8vw;
+    height: 8vw;
+    margin: 4rem 2rem 1rem;
+  }
+}/*# sourceMappingURL=style.css.map */

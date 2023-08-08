@@ -1,0 +1,276 @@
+$color-primary: #3C5D9C
+$color-secondary: #bb99f1
+$color-deep-purple: #8650DE
+
+*
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+  -webkit-font-smoothing: antialiased
+  font-family: 'Noto Sans TC', sans-serif
+
+h1,h2,h3,h4,h5,h6
+  font-weight: normal
+
+html
+  body
+  overflow-x: hidden
+  position: relative
+
+.blue
+  position: absolute
+  top: -10vh
+  // 因為要貼齊右邊所以設0
+  right: 0
+  // 背景區塊
+  z-index: -1
+  img
+    height: 100vh
+
+header
+  nav
+    width: 100%
+    ul
+      padding: 2rem
+      width: 70%
+      display: flex
+      list-style-type: none
+      justify-content: space-around
+      li
+        font-size: 1.5rem
+        a
+          color: #000000
+          text-decoration: none
+          &:hover
+            color:$color-primary
+
+main
+  display: flex
+  // flex-wrap: wrap
+  section.left
+    flex: 3 1 500px
+    padding: 2.5rem
+    position: relative
+    h1
+      font-size: 4rem
+      color: $color-primary
+    p
+      font-size: 1.5rem
+      padding: 2rem 0rem
+    .circle1
+      position: absolute
+      z-index: 0
+      min-width: 10rem
+      min-height: 10rem
+      background-color: $color-primary
+      border-radius: 50%
+      opacity: 0.5
+      top: 90%
+      left: -10%
+  section.right
+    flex: 1 1 600px
+    position: relative
+    img
+      border-radius: 50%
+      width: 20vw
+      height: 20vw
+      // 圖片不會走針
+      object-fit: cover
+      // 移動圖片
+      position: absolute
+      top: 35vh
+      right: 10vw
+      transform: translateY(-50%)
+    p
+      position: absolute
+      top: 65vh
+      right: 10vw
+      padding: 0.5rem 1.5rem
+      font-size: 2.5rem
+      color: #fff
+      background-color: $color-secondary
+      box-shadow: 1.5rem 1.5rem $color-deep-purple
+  section.table
+    margin: 1.5rem 2rem
+    flex: 3 1 500px
+    padding: 1rem
+    table
+      border-collapse: collapse
+      tr
+        border-bottom: 2px solid gray
+        transition: 0.2s ease
+        &:first-child
+          border-top: 2px solid gray
+        &:hover
+          background-color: $color-primary
+          td
+            &:nth-child(odd)
+              color: white
+            &:nth-child(even)
+              color: #dddddd
+            
+        td
+          padding: 1rem
+          &:nth-child(odd)
+            font-size: 1.5rem
+            color: $color-primary
+
+  section.picture
+    flex: 1 1 600px
+    img
+      width: 28vw
+      height: 74vh
+      object-fit: cover
+      box-shadow: 4rem 4rem $color-primary
+
+  section.form
+    flex: 1 1 600px
+    form
+      min-height: 70vh
+      display: flex
+      flex-direction: column
+      justify-content: space-around
+      padding: 1.5rem
+      div 
+        label
+          font-size: 1.5rem
+          padding: 1rem
+        input, textarea
+          background-color: #5477b8
+          color: white
+          font-size: 1.25rem
+          padding: 0.5rem 0.25rem
+          border: none
+          width: 90%
+          margin-top: 1.8rem
+        textarea
+          // 將需求:往上移
+          vertical-align: 0
+      button
+        align-self: center
+        width: 10rem
+        color: white
+        background-color: $color-primary
+        border: none
+        cursor: pointer
+        padding: 0.75rem 1.2rem
+        font-size: 1.5rem
+        border-radius: 10px
+        margin-top: 2rem
+        transition: 0.5s ease
+        &:hover
+          background-color: $color-secondary
+
+  div.line
+    background-color: gray
+    width: 3px
+        
+          
+  section.contact
+    flex: 1 1 500px
+    display: flex
+    max-height: 70vh
+    div.content
+      display: flex
+      flex-direction: column
+      justify-content: center
+      h2
+        margin: 2rem
+        font-size: 1.5rem
+      span
+        color: $color-primary
+        font-size: 1.8rem
+        padding: 1rem
+        font-weight: bold
+
+footer
+  .index
+    a 
+      img
+        margin: 8rem 4rem 0rem
+  .resume
+      a
+        img
+          margin: 0rem 4rem 2rem
+  .contact
+    a
+        img
+          margin: 0rem 4rem 2rem
+
+.active
+  color: $color-primary
+
+// 導入sass  
+@import './_animation'
+
+// 會設1100是因為上面的設定flex 500+600=1100
+@media screen and (max-width: 1100px)
+  .blue
+    opacity: 0.5
+    max-width: 30vw
+      
+  header
+    nav
+      ul
+        width: 100%
+        flex-direction: column
+        li
+          padding: 0.5rem 0
+          border-bottom: 2px solid $color-secondary
+
+  main
+    flex-wrap: wrap
+    section.right
+      display: flex
+      justify-content: center
+      img 
+        position: static
+        transform: none
+        min-width: 200px
+        min-height: 200px
+        object-fit: cover
+      p
+        font-size: 1.5rem
+        top: 20vh
+        right: 10vw
+        box-shadow: 1rem 1rem $color-deep-purple
+    section.picture
+      display: flex
+      justify-content: center
+      img
+        width: 45vw
+        height: 40vh
+        box-shadow: 2rem 2rem $color-primary
+  div.line
+    opacity: 0
+  section.contact
+    div.content
+      margin: 1rem
+      h2
+        font-size: 0.2rem
+        span
+          font-size: 1.5rem
+          padding: 0
+  footer
+    display: flex
+    justify-content: space-around
+    .index
+      a
+        img
+          width: 8vw
+          height: 8vw
+          margin: 4rem 2rem 1rem
+    .resume
+      a
+        img
+          width: 8vw
+          height: 8vw
+          margin: 4rem 2rem 1rem
+    .contact
+      a
+        img
+          width: 8vw
+          height: 8vw
+          margin: 4rem 2rem 1rem
+        
+    
